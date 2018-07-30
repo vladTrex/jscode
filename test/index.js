@@ -1,15 +1,11 @@
-var chai = require('chai');
+import chai from 'chai';
 
-import { identity, add, pluck } from '../index';
+import { identity, pluck } from '..';
 
-describe("just simple test", function() {
+describe("functional tests", function() {
 
-    it("should pass 2", function() {
+    it("should return agrument by unari function", function() {
         chai.expect(identity(2)).to.equal(2);
-    });
-
-    it("should add two numbers", function(){
-        chai.expect(add(2,3)).to.equal(5);
     });
   
 });
@@ -29,3 +25,5 @@ describe('pluck method', () => {
     });
 
 });
+
+

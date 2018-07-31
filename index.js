@@ -13,3 +13,12 @@ export const pluck = (list, name) => {
     
     return result;
 };
+
+export const getSlug = text => {
+  const separator = /[^a-z0-9]+/ig;
+  const drop = /^-|-$/g;
+  return text
+      .replace(separator, '-')
+      .replace(drop, '')
+      .toLowerCase();
+}

@@ -1,6 +1,6 @@
 import chai from 'chai';
 
-import { identity, pluck } from '..';
+import { identity, pluck, getSlug } from '..';
 
 describe("functional tests", function() {
 
@@ -26,4 +26,12 @@ describe('pluck method', () => {
 
 });
 
+describe('slug method', () => {
+    it('should return acceptable slug string', () => {
 
+        const expected = 'some-piece-of-text';
+
+        chai.expect(getSlug('Some piece of text')).to.equal(expected);
+
+    });
+});

@@ -1,7 +1,7 @@
 import chai from 'chai';
 
 import {calculateFibonacci} from '../recursion/fibonacci';
-import {factorialIterative} from '../recursion/factorial';
+import {factorialIterative, factorialRecursive} from '../recursion/factorial';
 
 describe('recursion functions', () => {
     describe('calculate fibonacci', () => {
@@ -11,8 +11,12 @@ describe('recursion functions', () => {
     });
 
     describe('factorial functions', () => {
-        it('should return factiorial of number', () => {
+        it('should return factiorial of number by iterative method', () => {
             chai.expect(factorialIterative(5)).to.equal(120);
+        });
+
+        it('should return factiorial of number by recursive method', () => {
+            chai.expect(factorialRecursive(5)).to.equal(120);
         });
     });
 })

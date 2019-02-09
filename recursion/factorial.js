@@ -9,3 +9,6 @@ export const factorialIterative = num => {
 
     return total;
 };
+
+export const factorialRecursive = num =>
+    num === 1 || num === 0 ? 1 : num * factorialRecursive(num - 1);
